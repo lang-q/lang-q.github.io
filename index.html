@@ -4,13 +4,45 @@
 		<meta charset="utf-8" />
 		<title>web</title>
 		<link rel="stylesheet" href="css/background.css">
+		<style>
+		        #datatime {
+		            font-family: Arial, sans-serif;
+		            font-size: 24px;
+					color: #333;
+		            text-align: center;
+		            margin-top: 50px;
+		            padding: 10px;
+		            border: 1px solid #ddd;
+		            border-radius: 5px;
+		            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		        }
+		        /* 设置时间显示样式 */
+		    </style>
+		
 	</head>
 	<body>
-		<p>这里什么也没有</p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p></p>
-		<p>真的什么也没有</p>
+		
+		<div id="datatime">正在加载时间...</div>
+		 
+		    <script>
+		        function updateTime() {
+		            const now = new Date();
+		            const year = now.getFullYear();
+		            const month = now.getMonth() + 1;
+		            const day = now.getDate();
+		            const hours = now.getHours();
+		            const minutes = now.getMinutes();
+		            const seconds = now.getSeconds();
+		            
+		            const timeString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+		            document.getElementById('datatime').textContent = timeString;
+		        }
+		 
+		        updateTime();
+				setInterval(updateTime, 1000);
+		    </script>
+	
+		<p>这里什么也没有</p><br>
+		<p>真的什么也没有</p><br>
 	</body>
 </html>
