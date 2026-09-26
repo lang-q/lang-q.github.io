@@ -1,0 +1,16 @@
+/* 自定义社交SVG图标 */
+.social-icon > .svg-bilibili,
+.social-icon > .svg-xiaohongshu {
+  display: inline-block;
+  width: 1.3em;
+  height:1.3em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.svg-bilibili{
+  background-image: url("/svg/bilibili.svg");
+}
+.svg-xiaohongshu{
+  background-image: url("/svg/xiaohongshu.svg");
+}
