@@ -18,10 +18,5 @@ layout: page
 - 📫 联系方式：lang_qi@outlook.com
 - 来自中国
 - 我是只福瑞！
-
-<!---
-lang-q/lang-q 是一个 ✨特别✨ 的仓库，这个 README.md 文件会展示在你的 GitHub 个人主页。
-你可以点击预览链接查看修改后的效果。
---->
-
-
+[哔哩哔哩个人主页](https://space.bilibili.com/3546394258311782)
+[小红书个人主页](https://www.xiaohongshu.com/user/profile/64aca6690000000010037179)
