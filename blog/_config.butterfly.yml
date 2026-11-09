@@ -279,10 +279,8 @@ footer:
 aside:
   enable: true
   hide: false
-  # Show the button to hide the aside in bottom right button
   button: true
   mobile: true
-  # Position: left / right
   position: right
   display:
     archive: true
@@ -298,67 +296,55 @@ aside:
       link: https://github.com/lang-q
   card_announcement:
     enable: true
+    title: 公告
     content: "欢迎来到我的博客🎉"
   card_recent_post:
     enable: true
-    # If set 0 will show all
+    title: 最新文章
     limit: 5
-    # Sort: date / updated
     sort: date
     sort_order:
-  card_newest_comments:
-    enable: false
-    sort_order:
-    limit: 6
-    # Unit: mins, save data to localStorage
-    storage: 10
-    avatar: true
   card_categories:
     enable: true
-    # If set 0 will show all
+    title: 分类
     limit: 8
-    # Choose: none / true / false
     expand: none
     sort_order:
   card_tags:
     enable: true
-    # If set 0 will show all
+    title: 标签
     limit: 40
     color: false
     custom_colors:
-    # Order of tags, random/name/length
     orderby: random
-    # Sort of order. 1, asc for ascending; -1, desc for descending
     order: 1
     sort_order:
   card_archives:
     enable: true
-    # Type: monthly / yearly
+    title: 归档
     type: monthly
-    # Eg: YYYY年MM月
-    format: MMMM YYYY
-    # Sort of order. 1, asc for ascending; -1, desc for descending
+    format: YYYY年MM月
     order: -1
-    # If set 0 will show all
     limit: 8
     sort_order:
   card_post_series:
     enable: true
-    # The title shows the series name
     series_title: false
-    # Order by title or date
     orderBy: 'date'
-    # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
   card_webinfo:
     enable: true
+    title: 网站信息
     post_count: true
     last_push_date: true
     sort_order:
-    # Time difference between publish date and now
-    # Formal: Month/Day/Year Time or Year/Month/Day Time
-    # Leave it empty if you don't enable this feature
     runtime_date:
+    text:
+      article_count: 文章数量
+      unique_visitors: 独立访客
+      page_views: 页面访问量
+      last_update: 最后更新
+
 
 # --------------------------------------
 # Bottom right button
@@ -1062,10 +1048,34 @@ css_prefix: true
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
-  head:
+ head:
     - <link rel="stylesheet" href="/css/custom.css">
+ inject:
+  head:
+    - <link rel="stylesheet" href="xxx">
   bottom:
-    # - <script src="xxxx"></script>
+    - |
+      <script>
+      dayjs.locale({
+        name: 'zh-cn',
+        relativeTime: {
+          future: '%s后',
+          past: '%s前',
+          s: '几秒',
+          m: '1 分钟',
+          mm: '%d 分钟',
+          h: '1 小时',
+          hh: '%d 小时',
+          d: '1 天',
+          dd: '%d 天',
+          M: '1 个月',
+          MM: '%d 个月',
+          y: '1 年',
+          yy: '%d 年'
+        }
+      })
+      </script>
+
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
